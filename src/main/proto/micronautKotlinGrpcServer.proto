@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "br.com.micronaut";
+option java_outer_classname = "MicronautKotlinGrpcServer";
+option objc_class_prefix = "HLW";
+
+package br.com.micronaut;
+
+service MicronautKotlinGrpcServerService {
+  rpc send (MicronautKotlinGrpcServerRequest) returns (MicronautKotlinGrpcServerReply) {}
+}
+
+message MicronautKotlinGrpcServerRequest {
+  string name = 1;
+}
+
+message MicronautKotlinGrpcServerReply {
+  string message = 1;
+}
